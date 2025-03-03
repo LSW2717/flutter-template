@@ -4,7 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
-// late final Store store;
+import 'objectbox.g.dart';
+
+late final Store store;
 
 Future<void> mainInitializer() async {
 
@@ -18,7 +20,7 @@ Future<void> mainInitializer() async {
   await initializeDateFormatting('ko_KR', null);
 
   // if you need localStorage
-  // store = await openStore();
+  store = await openStore();
 }
 
 class MyHttpOverrides extends HttpOverrides{

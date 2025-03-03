@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../layout/shell_view.dart';
-import '../../../../views/friends/friend/index/view.dart' as friend;
-import '../../../../views/friends/index/view.dart' as friends;
+import '../../../../presentation/friends/friend/index/view.dart' as friend;
+import '../../../../presentation/friends/index/view.dart' as friends;
 import '../../router.dart';
 import 'app_route.dart';
 

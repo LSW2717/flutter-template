@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../layout/shell_view.dart';
-import '../../../../views/rooms/index/view.dart' as rooms;
+import '../../../../presentation/rooms/index/view.dart' as rooms;
 import 'app_route.dart';
 
 final roomsShellNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'rooms');
