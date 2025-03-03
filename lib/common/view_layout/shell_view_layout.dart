@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/common/layout/shell_view.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_template/common/view_layout/shell_view.dart';
 import 'package:go_router/go_router.dart';
 
-class ShellViewLayout extends StatelessWidget {
+class ShellViewLayout extends ConsumerWidget {
   final StatefulNavigationShell navigationShell;
   final List<ShellView> shellViews;
 
@@ -12,7 +13,8 @@ class ShellViewLayout extends StatelessWidget {
     super.key,
   });
 
-  void _goBranch(int index) {
+  void _goBranch(int index, WidgetRef ref) async {
+    await shellViews[index].onTap(ref);
     navigationShell.goBranch(
       index,
       initialLocation: index == navigationShell.currentIndex,
@@ -20,7 +22,7 @@ class ShellViewLayout extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: shellViews[navigationShell.currentIndex].appBar(context),
       backgroundColor: Colors.white,
@@ -37,7 +39,9 @@ class ShellViewLayout extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.grey,
-          onTap: _goBranch,
+          onTap: (index){
+            _goBranch(index, ref);
+          },
           items: [
             ...shellViews.map(
                   (view) => view.navItem(context),

@@ -1,9 +1,10 @@
 import
 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../common/layout/shell_view.dart';
+import '../../../common/view_layout/shell_view.dart';
 
 class View extends StatelessWidget implements ShellView {
   const View({
@@ -30,6 +31,11 @@ class View extends StatelessWidget implements ShellView {
       icon: const Icon(Icons.person),
       label: text?.friends,
     );
+  }
+
+  @override
+  Future<void> onTap(WidgetRef ref) async {
+    // TODO: implement onTap
   }
 
   @override

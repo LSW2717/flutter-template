@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../common/layout/shell_view.dart';
+import '../../../common/view_layout/shell_view.dart';
 
-class View extends StatefulWidget implements ShellView{
+class View extends ConsumerStatefulWidget implements ShellView{
 
   const View({
     super.key,
   });
 
   @override
-  State<View> createState() => _ViewState();
+  ConsumerState<View> createState() => _ViewState();
 
   @override
   AppBar appBar(BuildContext context) {
@@ -34,9 +35,14 @@ class View extends StatefulWidget implements ShellView{
     );
   }
 
+  @override
+  Future<void> onTap(WidgetRef ref) async {
+    // TODO: implement onTap
+  }
+
 }
 
-class _ViewState extends State<View> {
+class _ViewState extends ConsumerState<View> {
   bool isShow = false;
 
   @override

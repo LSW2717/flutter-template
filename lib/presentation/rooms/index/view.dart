@@ -1,8 +1,7 @@
-import
-'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-import '../../../common/layout/shell_view.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../common/view_layout/shell_view.dart';
 
 class View extends StatelessWidget implements ShellView{
   const View({super.key});
@@ -27,6 +26,11 @@ class View extends StatelessWidget implements ShellView{
       icon: const Icon(Icons.chat),
       label: text?.rooms,
     );
+  }
+
+  @override
+  Future<void> onTap(WidgetRef ref) async {
+    // TODO: implement onTap
   }
 
   @override

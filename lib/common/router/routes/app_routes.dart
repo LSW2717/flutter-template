@@ -1,8 +1,7 @@
 
 import 'package:go_router/go_router.dart';
-
-import '../../layout/shell_view.dart';
-import '../../layout/shell_view_layout.dart';
+import '../../view_layout/shell_view.dart';
+import '../../view_layout/shell_view_layout.dart';
 import 'route/friends_route.dart';
 import 'route/home_route.dart';
 import 'route/rooms_route.dart';
