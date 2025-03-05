@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_template/common/view_layout/shell_view.dart';
+import 'package:flutter_template/common/layout/shell_view.dart';
 import 'package:go_router/go_router.dart';
 
-class ShellViewLayout extends ConsumerWidget {
+class ShellLayout extends ConsumerWidget {
   final StatefulNavigationShell navigationShell;
   final List<ShellView> shellViews;
 
-  const ShellViewLayout({
+  const ShellLayout({
     required this.navigationShell,
     required this.shellViews,
     super.key,

@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../presentation/settings/index/view.dart' as settings;
-import '../../../view_layout/shell_view.dart';
+import '../../../layout/shell_view.dart';
 import 'app_route.dart';
 
 final settingShellNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'setting');

@@ -1,6 +1,6 @@
 
 import 'package:go_router/go_router.dart';
-import '../../../view_layout/shell_view.dart';
+import '../../../layout/shell_view.dart';
 import 'app_route.dart';
 
 class IndexRoute extends AppRoute {

@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../presentation/home/index/view.dart' as home;
-import '../../../view_layout/shell_view.dart';
+import '../../../layout/shell_view.dart';
 import 'app_route.dart';
 
 final homeShellNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'home');
