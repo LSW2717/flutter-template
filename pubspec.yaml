@@ -48,7 +48,8 @@ dependencies:
   riverpod_generator:
 
   # util
-  pretty_json:
+
+  pretty_json: ^2.0.0
   flutter_screenutil: ^5.9.3
   json_annotation: ^4.9.0
 
